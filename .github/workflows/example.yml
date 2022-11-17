@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * *'  # every day at midnight
 
 env:
-  IMAGE_PATH: image-registry.openshift-image-registry.svc:5000
+  IMAGE_PATH: image-registry.openshift-image-registry.svc:5000/mcod-dev/petclinic:1.0
   APP_NAME: petclinic
   APP_PORT: 8080
   IMAGE_STREAM: ${{ secrets.OPENSHIFT_NAMESPACE }}/petclinic-${{ github.run_id }}
